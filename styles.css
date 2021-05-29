@@ -1,0 +1,134 @@
+/*Master styles*/
+body{
+    font-family: "Lato",sans-serif ;
+    margin: 0px; /*by default body has margin of 8px*/
+}
+
+/*css grid eka inbuilt to css , items align krnna ability 1 denava*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr;/*fractional unit 1fr=100%*/
+   /*i want the container to use grid and i want you to create these template columns using 1fr*/
+}
+
+/*Nav styles*/
+.nav-wrapper{
+    display: flex; /* flex eken element eka matha eka stack nokara left and right valata danava*/ 
+    justify-content: space-between;
+    padding: 30px;
+    
+}
+
+.left-side{
+    display: flex;
+}
+
+.brand > div {
+    margin:20px;
+}
+
+/*down below is how to travese through div's*/
+.nav-wrapper > .left-side > div{ /*issellama nav wrapper ekt gihin ita psse left side  ekata gihin eke thiyena div valata apply karnna*/
+    margin: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 1s;
+}
+
+/*inside the .nav-link-wrapper i just want to grab the a link*/
+.nav-link-wrapper a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+.active-nav-link{
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+    color: black !important;
+}
+
+/*portfolio styles*/
+
+.portfolio-items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*columns 3k thiyenava 1fr thiyena*/
+}
+
+.portfolio-item-wrapper{
+    position: relative; /*athulata dana items valata more flexibilty 1k denava*/
+}
+
+.Portfolio-img-background{
+    height: 350px;
+    width: 100%;
+    background-size: cover; /*imgs ekama sizes une nthi unama meka use krla crop krla ekm size krnva*/
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper{
+    position: absolute;/* doc eke flow ekak mokak unath absolute dapu thana eka thiyenna one*/
+    top: 0;/*positioned at very top*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*align items from left to right*/
+    align-items: center;/*align items from top to bottom*/
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
+    
+}
+
+.img-text-wrapper .subtitle{
+    transition: 1s;
+    color: transparent;
+    font-weight: 600;
+}
+
+.img-text-wrapper:hover .subtitle{
+    font-weight: 1000;
+    color: lightseagreen;
+
+}
+
+.img-darken{
+    transition: 1s;
+    filter: brightness(50%);
+}
+
+/*about page */
+
+.two-column-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img{
+    width: 100%;
+}
+
+.profile-content-wrapper h1{
+    color: lightseagreen;
+}
